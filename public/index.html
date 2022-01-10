@@ -4,14 +4,32 @@
     <meta charset="utf-8">
     <title>jobs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons&display=block" rel="stylesheet">
   </head>
   <body>
     <style>
       body {
         margin: 0;
+        font-family: Roboto;
+        --mdc-theme-primary: black;
       }
     </style>
-    <job-app></job-app>
+
+    <jobsite-information-dialog id=jobsiteInformationDialog></jobsite-information-dialog>
+    <jobsite-edit-dialog id=jobsiteEditDialog></jobsite-edit-dialog>
+
+    <job-app id=app></job-app>
+
+    <mwc-snackbar id=snackbar></mwc-snackbar>
+
     <script type=module src="/app.js"></script>
+    <script>
+      window.toast = function (labelText, timeoutMs = 4000) {
+        snackbar.labelText = labelText;
+        snackbar.timeoutMs = timeoutMs;
+        snackbar.open = true;
+      }
+    </script>
   </body>
 </html>
