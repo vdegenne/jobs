@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "@material/mwc-button": "^0.25.3",
+    "@material/mwc-checkbox": "^0.25.3",
+    "@material/mwc-icon-button": "^0.25.3",
+    "@material/mwc-tab-bar": "^0.25.3",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "browser-sync": "^2.27.7",
+    "lit": "^2.1.1",
+    "rollup": "^2.63.0",
+    "typescript": "^4.5.4"
+  },
+  "scripts": {
+    "watch": "rollup -cw",
+    "build": "rollup -c",
+    "browser-sync": "browser-sync public --files public/app.js --no-notify"
+  }
+}
